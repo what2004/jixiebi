@@ -1,0 +1,17 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - damuzhi_controller
+
+  damuzhi_controller:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - thumb_cmc_yaw
+      - thumb_cmc_roll
+      - thumb_cmc_pitch
+      - thumb_mcp
+      - thumb_dip

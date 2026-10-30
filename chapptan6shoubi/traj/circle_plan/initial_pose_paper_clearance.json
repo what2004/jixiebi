@@ -1,0 +1,127 @@
+{
+  "paper_z_m": 0.873325119303781,
+  "minimum_hand_clearance_m": -0.0014740445157244153,
+  "links": {
+    "base_link": {
+      "world_min_z_m": 1.397988998413086,
+      "clearance_above_paper_m": 0.524663879109305
+    },
+    "link2": {
+      "world_min_z_m": 1.303988998413086,
+      "clearance_above_paper_m": 0.4306638791093049
+    },
+    "link3": {
+      "world_min_z_m": 1.2329288193676344,
+      "clearance_above_paper_m": 0.35960370006385345
+    },
+    "link4": {
+      "world_min_z_m": 1.106407714412944,
+      "clearance_above_paper_m": 0.23308259510916307
+    },
+    "link5": {
+      "world_min_z_m": 1.0649822948754988,
+      "clearance_above_paper_m": 0.1916571755717178
+    },
+    "link6": {
+      "world_min_z_m": 1.0020198557196438,
+      "clearance_above_paper_m": 0.12869473641586282
+    },
+    "link7": {
+      "world_min_z_m": 0.9844971478729005,
+      "clearance_above_paper_m": 0.11117202856911956
+    },
+    "tool_link": {
+      "world_min_z_m": 0.9706917740781933,
+      "clearance_above_paper_m": 0.09736665477441231
+    },
+    "hand_base_link": {
+      "world_min_z_m": 0.8867007484914162,
+      "clearance_above_paper_m": 0.01337562918763524
+    },
+    "pinky_metacarpals": {
+      "world_min_z_m": 0.8874782948259179,
+      "clearance_above_paper_m": 0.014153175522136907
+    },
+    "pinky_proximal": {
+      "world_min_z_m": 0.8728236722219634,
+      "clearance_above_paper_m": -0.0005014470818175409
+    },
+    "pinky_middle": {
+      "world_min_z_m": 0.8718510747880566,
+      "clearance_above_paper_m": -0.0014740445157244153
+    },
+    "pinky_distal": {
+      "world_min_z_m": 0.8744751895333805,
+      "clearance_above_paper_m": 0.0011500702295995646
+    },
+    "ring_metacarpals": {
+      "world_min_z_m": 0.9029976072343663,
+      "clearance_above_paper_m": 0.0296724879305853
+    },
+    "ring_proximal": {
+      "world_min_z_m": 0.8883429962881835,
+      "clearance_above_paper_m": 0.01501787698440249
+    },
+    "ring_middle": {
+      "world_min_z_m": 0.8873703990408426,
+      "clearance_above_paper_m": 0.0140452797370616
+    },
+    "ring_distal": {
+      "world_min_z_m": 0.8899945820386717,
+      "clearance_above_paper_m": 0.016669462734890672
+    },
+    "middle_metacarpals": {
+      "world_min_z_m": 0.9197936534045015,
+      "clearance_above_paper_m": 0.04646853410072049
+    },
+    "middle_proximal": {
+      "world_min_z_m": 0.9000922767388733,
+      "clearance_above_paper_m": 0.02676715743509228
+    },
+    "middle_middle": {
+      "world_min_z_m": 0.8911978094756766,
+      "clearance_above_paper_m": 0.017872690171895633
+    },
+    "middle_distal": {
+      "world_min_z_m": 0.886639520051713,
+      "clearance_above_paper_m": 0.013314400747931998
+    },
+    "index_metacarpals": {
+      "world_min_z_m": 0.9399866058596976,
+      "clearance_above_paper_m": 0.06666148655591664
+    },
+    "index_proximal": {
+      "world_min_z_m": 0.9207260232097266,
+      "clearance_above_paper_m": 0.047400903905945646
+    },
+    "index_middle": {
+      "world_min_z_m": 0.9093980339778327,
+      "clearance_above_paper_m": 0.036072914674051715
+    },
+    "index_distal": {
+      "world_min_z_m": 0.905413714157027,
+      "clearance_above_paper_m": 0.032088594853246
+    },
+    "thumb_metacarpals_base1": {
+      "world_min_z_m": 0.9439298104165903,
+      "clearance_above_paper_m": 0.07060469111280931
+    },
+    "thumb_metacarpals_base2": {
+      "world_min_z_m": 0.9607079777037734,
+      "clearance_above_paper_m": 0.08738285839999238
+    },
+    "thumb_metacarpals": {
+      "world_min_z_m": 0.941047767008634,
+      "clearance_above_paper_m": 0.06772264770485303
+    },
+    "thumb_proximal": {
+      "world_min_z_m": 0.9248736177457828,
+      "clearance_above_paper_m": 0.05154849844200182
+    },
+    "thumb_distal": {
+      "world_min_z_m": 0.9017637396648889,
+      "clearance_above_paper_m": 0.02843862036110789
+    }
+  },
+  "notes": "仅检查初始姿态的网格最低点；整个圆周保持手部姿态，因此手部相对纸面的高度不变。不等于完整碰撞检查。"
+}

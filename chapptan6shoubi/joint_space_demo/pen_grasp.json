@@ -1,0 +1,44 @@
+{
+  "description": "自然三指握笔候选姿态：指节舒缓弯曲、中指侧面托笔、拇指和食指靠近笔尖夹持，腕部调整为书写朝向。笔长180mm、直径12mm。",
+  "units": "rad and m",
+  "pen_xyz": [
+    0.04253451,
+    0.03253883,
+    0.16752748
+  ],
+  "pen_rpy": [
+    0.74057852,
+    0.39397124,
+    0.33748044
+  ],
+  "goal": {
+    "joint1": 0.221,
+    "joint2": 0.941,
+    "joint3": -1.58,
+    "joint4": 0.722,
+    "joint5": -0.68299,
+    "joint6": 0.091242,
+    "joint7": 0.234539,
+    "index_mcp_roll": 0.111804,
+    "index_mcp_pitch": 0.739774,
+    "index_pip": 0.647991,
+    "index_dip": 0.428147,
+    "middle_mcp_roll": 0.122788,
+    "middle_mcp_pitch": 0.712786,
+    "middle_pip": 0.857346,
+    "middle_dip": 0.118932,
+    "ring_mcp_roll": 0,
+    "ring_mcp_pitch": 1.0,
+    "ring_pip": 1.2,
+    "ring_dip": 0.55,
+    "pinky_mcp_roll": 0,
+    "pinky_mcp_pitch": 1.0,
+    "pinky_pip": 1.2,
+    "pinky_dip": 0.55,
+    "thumb_cmc_yaw": 0.858034,
+    "thumb_cmc_roll": 0.653393,
+    "thumb_cmc_pitch": 0.458161,
+    "thumb_mcp": 0.504745,
+    "thumb_dip": 0.263593
+  }
+}

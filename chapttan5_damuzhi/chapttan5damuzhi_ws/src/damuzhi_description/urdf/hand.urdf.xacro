@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version 1.6.0-4-g7f85cfe  Build Version 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<!-- 注意：本文件注释里不要出现 冒号加空格（例如 Version 后面跟冒号再跟空格再跟 1.6）。
+     gazebo_ros2_control 会把整段 URDF 作为 robot_description 参数传给 controller_manager，
+     rcl 解析器遇到 冒号加空格 会报 Couldn't parse parameter override rule，导致 controller_manager 无法启动。
+     如果以后用 SolidWorks 重新导出，记得去掉注释里的冒号。 -->
+<robot
+  name="linkerhand_l20_right">
+  <material name="silver">
+    <color rgba="0.5 0.5 0.52 1.0"/>
+  </material>
+
+  <material name="BlackAccent">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+
+  <material name="Red">
+    <color rgba="1.0 0.0 0.0 1.0"/>
+  </material>
+
+    <!-- ===== 方案A：把掌根固定到世界 =====
+       原来 base_link 是自由基座，所有手指同时运动的反作用力会把整只手打飞。
+       加一个 world link + 固定关节，把掌根焊在 spawn 的位置。 -->
+  <link
+    name="world"/>
+  <joint
+    name="fixed_base"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="base_link" />
+  </joint>
+
+
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0116260966942382 -0.00274813279998326 0.0887556064299578"
+        rpy="0 0 0" />
+      <mass
+        value="0.119355521222427" />
+      <inertia
+        ixx="0.000281608895823112"
+        ixy="8.38474241472843E-07"
+        ixz="-1.21134466138976E-05"
+        iyy="0.00019328567036429"
+        iyz="4.38631241419914E-07"
+        izz="0.000103627416878272" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="thumb_metacarpals_base1">
+    <inertial>
+      <origin
+        xyz="0.00225106540143255 0.0106280781314811 0.00386496887062775"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123197273270212" />
+      <inertia
+        ixx="3.08398596758481E-06"
+        ixy="-7.90434968870597E-08"
+        ixz="4.99257949343636E-08"
+        iyy="4.73419522678173E-06"
+        iyz="-1.89397292598919E-07"
+        izz="2.03268500392085E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+      <material name="BlackAccent"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_yaw"
+    type="revolute">
+    <origin
+      xyz="0.0039847 0.0050818 0.057392"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_metacarpals_base1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.4"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_metacarpals_base2">
+    <inertial>
+      <origin
+        xyz="0.00119794122046318 0.00176288166433086 0.00980405746394286"
+        rpy="0 0 0" />
+      <mass
+        value="0.00459776097124383" />
+      <inertia
+        ixx="7.31648689063878E-07"
+        ixy="-4.16925980705595E-08"
+        ixz="7.27793121012466E-08"
+        iyy="5.38489639105841E-07"
+        iyz="-1.05409912056041E-07"
+        izz="3.72559163410338E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals_base2.STL" />
+      </geometry>
+      <material name="BlackAccent"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals_base2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_roll"
+    type="revolute">
+    <origin
+      xyz="0.000784740002368223 0.0196077603627024 0.000308721957079858"
+      rpy="1.18264333118745 0 1.57079632679503" />
+    <parent
+      link="thumb_metacarpals_base1" />
+    <child
+      link="thumb_metacarpals_base2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.22"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_metacarpals">
+    <inertial>
+      <origin
+        xyz="0.00549384865796482 0.00805524685758721 0.0258290762784949"
+        rpy="0 0 0" />
+      <mass
+        value="0.0119728760675928" />
+      <inertia
+        ixx="4.12796153480032E-06"
+        ixy="2.08264516047914E-08"
+        ixz="1.78085589076533E-08"
+        iyy="4.82110081302191E-06"
+        iyz="6.19419770800233E-08"
+        izz="1.21324079339986E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals.STL" />
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_metacarpals.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.000109690908352875 -0.00396440679180957 0.0307945044045898"
+      rpy="0 0.388152995607441 -1.57079632624948" />
+    <parent
+      link="thumb_metacarpals_base2" />
+    <child
+      link="thumb_metacarpals" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.79"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_proximal">
+    <inertial>
+      <origin
+        xyz="-0.0011057174593414 0.000334119020688653 0.0128607021591473"
+        rpy="0 0 0" />
+      <mass
+        value="0.00515940162015082" />
+      <inertia
+        ixx="4.56371524641978E-07"
+        ixy="1.15255552260169E-09"
+        ixz="8.11361744697202E-08"
+        iyy="6.16289154720601E-07"
+        iyz="5.36536229784869E-09"
+        izz="2.4689422432426E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_proximal.STL" />
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_mcp"
+    type="revolute">
+    <origin
+      xyz="0.00857856380171737 0 0.0555715948082196"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpals" />
+    <child
+      link="thumb_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.05"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_distal">
+    <inertial>
+      <origin
+        xyz="-0.00636210776657178 4.14651450399844E-05 0.0118150620527104"
+        rpy="0 0 0" />
+      <mass
+        value="0.00614449456083594" />
+      <inertia
+        ixx="3.71418540379979E-07"
+        ixy="2.36548498459678E-10"
+        ixz="-9.49666673834207E-08"
+        iyy="4.48768445500361E-07"
+        iyz="-9.82614466952934E-10"
+        izz="1.66160918259876E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_distal.STL" />
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damuzhi_description/meshes/thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_dip"
+    type="revolute">
+    <origin
+      xyz="0.0066653832125308 0 0.0342561774516276"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_proximal" />
+    <child
+      link="thumb_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.22"
+      effort="1"
+      velocity="1" />
+
+  </joint>
+  <!-- 指尖坐标系：thumb_distal 系内指尖偏移（由 thumb_distal.STL 网格最远表面点测得）(-13.946, 0.000, 31.885) mm，红色小球作可视化标记 -->
+  <link
+    name="thumb_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001" />
+      <inertia
+        ixx="1.0E-10"
+        ixy="0"
+        ixz="0"
+        iyy="1.0E-10"
+        iyz="0"
+        izz="1.0E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere
+          radius="0.003" />
+      </geometry>
+      <material name="Red"/>
+    </visual>
+  </link>
+  <joint
+    name="thumb_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="-0.013946 0 0.031885"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_distal" />
+    <child
+      link="thumb_tip" />
+  </joint>
+
+</robot>

@@ -1,0 +1,141 @@
+{
+  "method": "dense_mesh_surface_samples_against_pen_envelope",
+  "pen_length_mm": 180,
+  "pen_diameter_mm": 12,
+  "links": {
+    "hand_base_link": {
+      "minimum_sample_clearance_mm": 16.5229,
+      "inside_samples": 0,
+      "samples": 355824,
+      "nearest_point_distance_from_tip_mm": 125.941
+    },
+    "pinky_metacarpals": {
+      "minimum_sample_clearance_mm": 76.4467,
+      "inside_samples": 0,
+      "samples": 10668,
+      "nearest_point_distance_from_tip_mm": 76.765
+    },
+    "pinky_proximal": {
+      "minimum_sample_clearance_mm": 53.1754,
+      "inside_samples": 0,
+      "samples": 113022,
+      "nearest_point_distance_from_tip_mm": 45.05
+    },
+    "pinky_middle": {
+      "minimum_sample_clearance_mm": 45.7239,
+      "inside_samples": 0,
+      "samples": 112644,
+      "nearest_point_distance_from_tip_mm": 41.14
+    },
+    "pinky_distal": {
+      "minimum_sample_clearance_mm": 47.1819,
+      "inside_samples": 0,
+      "samples": 131950,
+      "nearest_point_distance_from_tip_mm": 42.15
+    },
+    "ring_metacarpals": {
+      "minimum_sample_clearance_mm": 63.1759,
+      "inside_samples": 0,
+      "samples": 10668,
+      "nearest_point_distance_from_tip_mm": 87.039
+    },
+    "ring_proximal": {
+      "minimum_sample_clearance_mm": 38.7606,
+      "inside_samples": 0,
+      "samples": 113022,
+      "nearest_point_distance_from_tip_mm": 52.799
+    },
+    "ring_middle": {
+      "minimum_sample_clearance_mm": 24.2021,
+      "inside_samples": 0,
+      "samples": 112630,
+      "nearest_point_distance_from_tip_mm": 48.164
+    },
+    "ring_distal": {
+      "minimum_sample_clearance_mm": 24.9335,
+      "inside_samples": 0,
+      "samples": 131950,
+      "nearest_point_distance_from_tip_mm": 48.935
+    },
+    "middle_metacarpals": {
+      "minimum_sample_clearance_mm": 51.9653,
+      "inside_samples": 0,
+      "samples": 10668,
+      "nearest_point_distance_from_tip_mm": 99.382
+    },
+    "middle_proximal": {
+      "minimum_sample_clearance_mm": 37.2356,
+      "inside_samples": 0,
+      "samples": 113022,
+      "nearest_point_distance_from_tip_mm": 71.86
+    },
+    "middle_middle": {
+      "minimum_sample_clearance_mm": 13.2442,
+      "inside_samples": 0,
+      "samples": 112630,
+      "nearest_point_distance_from_tip_mm": 47.07
+    },
+    "middle_distal": {
+      "minimum_sample_clearance_mm": 0.3985,
+      "inside_samples": 0,
+      "samples": 131950,
+      "nearest_point_distance_from_tip_mm": 26.457
+    },
+    "index_metacarpals": {
+      "minimum_sample_clearance_mm": 36.6957,
+      "inside_samples": 0,
+      "samples": 10668,
+      "nearest_point_distance_from_tip_mm": 112.641
+    },
+    "index_proximal": {
+      "minimum_sample_clearance_mm": 23.4781,
+      "inside_samples": 0,
+      "samples": 113022,
+      "nearest_point_distance_from_tip_mm": 86.133
+    },
+    "index_middle": {
+      "minimum_sample_clearance_mm": 6.5605,
+      "inside_samples": 0,
+      "samples": 112602,
+      "nearest_point_distance_from_tip_mm": 48.566
+    },
+    "index_distal": {
+      "minimum_sample_clearance_mm": 0.1642,
+      "inside_samples": 0,
+      "samples": 131950,
+      "nearest_point_distance_from_tip_mm": 42.802
+    },
+    "thumb_metacarpals_base1": {
+      "minimum_sample_clearance_mm": 55.1314,
+      "inside_samples": 0,
+      "samples": 78372,
+      "nearest_point_distance_from_tip_mm": 158.382
+    },
+    "thumb_metacarpals_base2": {
+      "minimum_sample_clearance_mm": 61.5388,
+      "inside_samples": 0,
+      "samples": 40040,
+      "nearest_point_distance_from_tip_mm": 139.796
+    },
+    "thumb_metacarpals": {
+      "minimum_sample_clearance_mm": 24.9521,
+      "inside_samples": 0,
+      "samples": 150514,
+      "nearest_point_distance_from_tip_mm": 94.346
+    },
+    "thumb_proximal": {
+      "minimum_sample_clearance_mm": 14.0648,
+      "inside_samples": 0,
+      "samples": 95144,
+      "nearest_point_distance_from_tip_mm": 71.236
+    },
+    "thumb_distal": {
+      "minimum_sample_clearance_mm": 0.1865,
+      "inside_samples": 0,
+      "samples": 155029,
+      "nearest_point_distance_from_tip_mm": 42.116
+    }
+  },
+  "limitations": "仅用于静态可视化的表面采样检查，不验证抓取力、摩擦或完整自碰撞。",
+  "inside_samples_total": 0
+}

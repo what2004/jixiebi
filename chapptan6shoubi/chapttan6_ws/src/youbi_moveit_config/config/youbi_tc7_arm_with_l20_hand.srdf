@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!-- youbi_tc7_arm + LinkerHand L20 的 MoveIt 语义描述(SRDF)
+     说明 URDF 里已有 world 到 base_link 的固定关节 因此不再重复声明 virtual_joint
+     只有两个规划组 一一对应两个模型文件
+       arm  7 轴链(base_link→tool_link)  <- urdf/arm.urdf.xacro
+       hand 21 个手指关节                <- urdf/hand_l20.urdf.xacro
+     5 个远端关节已改为独立控制 不再是 mimic/passive 关节 -->
+<robot name="youbi_tc7_arm_with_l20_hand">
+  <group name="arm">
+    <chain base_link="base_link" tip_link="tool_link"/>
+    <group_state name="home" group="arm">
+      <joint name="joint1" value="0"/>
+      <joint name="joint2" value="0"/>
+      <joint name="joint3" value="0"/>
+      <joint name="joint4" value="0"/>
+      <joint name="joint5" value="0"/>
+      <joint name="joint6" value="0"/>
+      <joint name="joint7" value="0"/>
+    </group_state>
+  </group>
+
+  <group name="hand">
+    <joint name="index_dip"/>
+    <joint name="middle_dip"/>
+    <joint name="ring_dip"/>
+    <joint name="pinky_dip"/>
+    <joint name="thumb_dip"/>
+    <joint name="index_mcp_roll"/>
+    <joint name="index_mcp_pitch"/>
+    <joint name="index_pip"/>
+    <joint name="middle_mcp_roll"/>
+    <joint name="middle_mcp_pitch"/>
+    <joint name="middle_pip"/>
+    <joint name="ring_mcp_roll"/>
+    <joint name="ring_mcp_pitch"/>
+    <joint name="ring_pip"/>
+    <joint name="pinky_mcp_roll"/>
+    <joint name="pinky_mcp_pitch"/>
+    <joint name="pinky_pip"/>
+    <joint name="thumb_cmc_yaw"/>
+    <joint name="thumb_cmc_roll"/>
+    <joint name="thumb_cmc_pitch"/>
+    <joint name="thumb_mcp"/>
+    <group_state name="open" group="hand">
+      <joint name="index_mcp_roll" value="0"/>
+      <joint name="index_mcp_pitch" value="0"/>
+      <joint name="index_pip" value="0"/>
+      <joint name="middle_mcp_roll" value="0"/>
+      <joint name="middle_mcp_pitch" value="0"/>
+      <joint name="middle_pip" value="0"/>
+      <joint name="ring_mcp_roll" value="0"/>
+      <joint name="ring_mcp_pitch" value="0"/>
+      <joint name="ring_pip" value="0"/>
+      <joint name="pinky_mcp_roll" value="0"/>
+      <joint name="pinky_mcp_pitch" value="0"/>
+      <joint name="pinky_pip" value="0"/>
+      <joint name="thumb_cmc_yaw" value="0"/>
+      <joint name="thumb_cmc_roll" value="0"/>
+      <joint name="thumb_cmc_pitch" value="0"/>
+      <joint name="thumb_mcp" value="0"/>
+      <joint name="index_dip" value="0"/>
+      <joint name="middle_dip" value="0"/>
+      <joint name="ring_dip" value="0"/>
+      <joint name="pinky_dip" value="0"/>
+      <joint name="thumb_dip" value="0"/>
+    </group_state>
+    <group_state name="half_closed" group="hand">
+      <joint name="index_mcp_roll" value="0"/>
+      <joint name="index_mcp_pitch" value="0.7"/>
+      <joint name="index_pip" value="0.7"/>
+      <joint name="middle_mcp_roll" value="0"/>
+      <joint name="middle_mcp_pitch" value="0.7"/>
+      <joint name="middle_pip" value="0.7"/>
+      <joint name="ring_mcp_roll" value="0"/>
+      <joint name="ring_mcp_pitch" value="0.7"/>
+      <joint name="ring_pip" value="0.7"/>
+      <joint name="pinky_mcp_roll" value="0"/>
+      <joint name="pinky_mcp_pitch" value="0.7"/>
+      <joint name="pinky_pip" value="0.7"/>
+      <joint name="thumb_cmc_yaw" value="0"/>
+      <joint name="thumb_cmc_roll" value="0"/>
+      <joint name="thumb_cmc_pitch" value="0"/>
+      <joint name="thumb_mcp" value="0.5"/>
+      <joint name="index_dip" value="0.7"/>
+      <joint name="middle_dip" value="0.7"/>
+      <joint name="ring_dip" value="0.7"/>
+      <joint name="pinky_dip" value="0.7"/>
+      <joint name="thumb_dip" value="0.5"/>
+    </group_state>
+  </group>
+
+  <end_effector name="l20_hand" parent_link="tool_link" group="hand" parent_group="arm"/>
+
+
+  <disable_collisions link1="world" link2="base_link" reason="Adjacent"/>
+  <disable_collisions link1="tool_link" link2="hand_mount" reason="Adjacent"/>
+  <disable_collisions link1="base_link" link2="link2" reason="Adjacent"/>
+  <disable_collisions link1="link2" link2="link3" reason="Adjacent"/>
+  <disable_collisions link1="link3" link2="link4" reason="Adjacent"/>
+  <disable_collisions link1="link4" link2="link5" reason="Adjacent"/>
+  <disable_collisions link1="link5" link2="link6" reason="Adjacent"/>
+  <disable_collisions link1="link6" link2="link7" reason="Adjacent"/>
+  <disable_collisions link1="link7" link2="tool_link" reason="Adjacent"/>
+  <disable_collisions link1="hand_base_link" link2="pinky_metacarpals" reason="Adjacent"/>
+  <disable_collisions link1="pinky_metacarpals" link2="pinky_proximal" reason="Adjacent"/>
+  <disable_collisions link1="pinky_proximal" link2="pinky_middle" reason="Adjacent"/>
+  <disable_collisions link1="pinky_middle" link2="pinky_distal" reason="Adjacent"/>
+  <disable_collisions link1="hand_base_link" link2="ring_metacarpals" reason="Adjacent"/>
+  <disable_collisions link1="ring_metacarpals" link2="ring_proximal" reason="Adjacent"/>
+  <disable_collisions link1="ring_proximal" link2="ring_middle" reason="Adjacent"/>
+  <disable_collisions link1="ring_middle" link2="ring_distal" reason="Adjacent"/>
+  <disable_collisions link1="hand_base_link" link2="middle_metacarpals" reason="Adjacent"/>
+  <disable_collisions link1="middle_metacarpals" link2="middle_proximal" reason="Adjacent"/>
+  <disable_collisions link1="middle_proximal" link2="middle_middle" reason="Adjacent"/>
+  <disable_collisions link1="middle_middle" link2="middle_distal" reason="Adjacent"/>
+  <disable_collisions link1="hand_base_link" link2="index_metacarpals" reason="Adjacent"/>
+  <disable_collisions link1="index_metacarpals" link2="index_proximal" reason="Adjacent"/>
+  <disable_collisions link1="index_proximal" link2="index_middle" reason="Adjacent"/>
+  <disable_collisions link1="index_middle" link2="index_distal" reason="Adjacent"/>
+  <disable_collisions link1="hand_base_link" link2="thumb_metacarpals_base1" reason="Adjacent"/>
+  <disable_collisions link1="thumb_metacarpals_base1" link2="thumb_metacarpals_base2" reason="Adjacent"/>
+  <disable_collisions link1="thumb_metacarpals_base2" link2="thumb_metacarpals" reason="Adjacent"/>
+  <disable_collisions link1="thumb_metacarpals" link2="thumb_proximal" reason="Adjacent"/>
+  <disable_collisions link1="thumb_proximal" link2="thumb_distal" reason="Adjacent"/>
+  <disable_collisions link1="hand_mount" link2="hand_base_link" reason="Adjacent"/>
+</robot>

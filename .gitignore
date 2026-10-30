@@ -1,0 +1,24 @@
+# ROS / colcon generated files
+**/build/
+**/install/
+**/log/
+
+# Python and editor caches
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+**/.vscode/
+*.vc.db*
+*.swp
+*~
+
+# Local assistant / cloud configuration
+**/.codex/
+**/.agents/
+**/.aws/
+.env
+.env.*
+!.env.example
+
+# Per-run animation output; representative results are kept in traj/
+**/traj/circle_animation/circle_*/

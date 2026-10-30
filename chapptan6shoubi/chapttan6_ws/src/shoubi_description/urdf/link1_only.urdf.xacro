@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 最小测试模型：只保留 base_link（LINK1）
+     用法: xacro link1_only.urdf.xacro
+     目的: 先在 RViz2 里确认 mesh 能显示出来 -->
+<robot name="link1_only" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="meshes_dir" default="package://temp_description/meshes"/>
+
+  <material name="silver"><color rgba="0.62 0.62 0.65 1.0"/></material>
+
+  <link name="world"/>
+  <joint name="fixed_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh scale="0.001 0.001 0.001" filename="$(arg meshes_dir)/base_link.STL"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh scale="0.001 0.001 0.001" filename="$(arg meshes_dir)/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

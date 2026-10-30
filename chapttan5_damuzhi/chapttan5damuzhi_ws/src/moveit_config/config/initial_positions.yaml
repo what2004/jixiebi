@@ -1,0 +1,8 @@
+# Default initial positions for linkerhand_l20_right's ros2_control fake system
+
+initial_positions:
+  thumb_cmc_pitch: 0
+  thumb_cmc_roll: 0
+  thumb_cmc_yaw: 0
+  thumb_dip: 0
+  thumb_mcp: 0

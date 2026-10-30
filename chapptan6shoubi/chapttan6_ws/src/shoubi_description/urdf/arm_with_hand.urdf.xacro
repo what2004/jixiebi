@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 机械臂 youbi_tc7_arm + LinkerHand L20 灵巧手（拼装后的完整模型）
+     用法 xacro arm_with_hand.urdf.xacro
+     构成 = arm.urdf.xacro（机械臂，含 world→base_link→…→tool_link→hand_mount）
+          + hand_l20.urdf.xacro（灵巧手）
+          + 本文件里的 hand_attach_joint（把灵巧手掌根固定到机械臂 hand_mount 上）
+
+     挂载位姿可调（不需要改文件，命令行传参即可）
+       xacro arm_with_hand.urdf.xacro hand_xyz:="0 0 0" hand_rpy:="0 0 0"
+     默认是单位变换，即灵巧手掌根坐标系与机械臂 hand_mount 重合、手指朝 hand_mount 的 +Z -->
+<robot name="youbi_tc7_arm_with_l20_hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="hand_xyz" default="0 0 0"/>
+  <xacro:arg name="hand_rpy" default="0 0 0"/>
+  <xacro:arg name="with_pen" default="false"/>
+  <xacro:arg name="pen_xyz" default="0.05 0.01 0.205"/>
+  <xacro:arg name="pen_rpy" default="1.5707963267948966 0 0"/>
+
+  <xacro:include filename="arm.urdf.xacro"/>
+  <xacro:include filename="hand_l20.urdf.xacro"/>
+  <xacro:include filename="pen.urdf.xacro"/>
+
+  <!-- 灵巧手挂载点：机械臂 hand_mount → 灵巧手掌根 -->
+  <joint name="hand_attach_joint" type="fixed">
+    <origin xyz="$(arg hand_xyz)" rpy="$(arg hand_rpy)"/>
+    <parent link="hand_mount"/>
+    <child link="hand_base_link"/>
+  </joint>
+  <xacro:if value="$(arg with_pen)">
+    <xacro:simple_pen parent="hand_base_link" xyz="$(arg pen_xyz)" rpy="$(arg pen_rpy)"/>
+  </xacro:if>
+</robot>

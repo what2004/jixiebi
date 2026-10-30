@@ -1,0 +1,280 @@
+{
+ "generated_at": "2026-10-26 11:13:02",
+ "command": "/home/zhili/chapptan6shoubi/joint_space_demo/jt_run.py --group both --start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 --goal 0.221 0.941 -1.58 0.722 -0.187 0.426 0.535 0.0 0.257 1.112 0.651 0.0 0.469 0.764 1.029 0.0 0.439 0.662 0.787 0.0 0.484 0.806 0.62 0.583 0.943 0.098 0.346 0.607 --sync --duration 5 --steps 240 --csv --outdir /home/zhili/chapptan6shoubi/traj/ptp_target",
+ "group": "hand",
+ "joint_names": [
+  "index_mcp_roll",
+  "index_mcp_pitch",
+  "index_pip",
+  "index_dip",
+  "middle_mcp_roll",
+  "middle_mcp_pitch",
+  "middle_pip",
+  "middle_dip",
+  "ring_mcp_roll",
+  "ring_mcp_pitch",
+  "ring_pip",
+  "ring_dip",
+  "pinky_mcp_roll",
+  "pinky_mcp_pitch",
+  "pinky_pip",
+  "pinky_dip",
+  "thumb_cmc_yaw",
+  "thumb_cmc_roll",
+  "thumb_cmc_pitch",
+  "thumb_mcp",
+  "thumb_dip"
+ ],
+ "start_positions": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "goal_positions": [
+  0.0,
+  0.257,
+  1.112,
+  0.651,
+  0.0,
+  0.469,
+  0.764,
+  1.029,
+  0.0,
+  0.439,
+  0.662,
+  0.787,
+  0.0,
+  0.484,
+  0.806,
+  0.62,
+  0.583,
+  0.943,
+  0.098,
+  0.346,
+  0.607
+ ],
+ "delta": [
+  0.0,
+  0.257,
+  1.112,
+  0.651,
+  0.0,
+  0.469,
+  0.764,
+  1.029,
+  0.0,
+  0.439,
+  0.662,
+  0.787,
+  0.0,
+  0.484,
+  0.806,
+  0.62,
+  0.583,
+  0.943,
+  0.098,
+  0.346,
+  0.607
+ ],
+ "profile": "cosine  (s = 0.5*(1-cos(pi*f))，按关节空间累积弧长分配时间)",
+ "steps": 240,
+ "num_points": 241,
+ "requested_duration_s": 5.0,
+ "duration_s": 5.0,
+ "vmax_used": 1.0,
+ "max_vel_measured": 0.34934105965351137,
+ "limits": {
+  "index_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_yaw": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_roll": {
+   "lower": 0.0,
+   "upper": 1.22,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_pitch": {
+   "lower": 0.0,
+   "upper": 0.79,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_mcp": {
+   "lower": 0.0,
+   "upper": 1.05,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_dip": {
+   "lower": 0.0,
+   "upper": 1.22,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  }
+ },
+ "peak_v": {
+  "index_mcp_roll": 0.0,
+  "index_mcp_pitch": 0.08073893119725768,
+  "index_pip": 0.34934510307918504,
+  "index_dip": 0.20451768174869556,
+  "middle_mcp_roll": 0.0,
+  "middle_mcp_pitch": 0.1473406954533613,
+  "middle_pip": 0.2400176787342602,
+  "middle_dip": 0.32326988405438967,
+  "ring_mcp_roll": 0.0,
+  "ring_mcp_pitch": 0.1379159174925919,
+  "ring_pip": 0.20797343366764434,
+  "ring_dip": 0.24724334183751676,
+  "pinky_mcp_roll": 0.0,
+  "pinky_mcp_pitch": 0.152053084433746,
+  "pinky_pip": 0.2532123678793373,
+  "pinky_dip": 0.1947787445225672,
+  "thumb_cmc_yaw": 0.18315485170428494,
+  "thumb_cmc_roll": 0.2962521872335175,
+  "thumb_cmc_pitch": 0.030787608005179972,
+  "thumb_mcp": 0.10869910581420683,
+  "thumb_dip": 0.19069467407290044
+ },
+ "peak_a": {
+  "index_mcp_roll": 0.0,
+  "index_mcp_pitch": 0.0507297666215993,
+  "index_pip": 0.21950000188022734,
+  "index_dip": 0.12850224930218343,
+  "middle_mcp_roll": 0.0,
+  "middle_mcp_pitch": 0.09257688928221817,
+  "middle_pip": 0.1508075552486454,
+  "middle_dip": 0.20311645857441896,
+  "ring_mcp_roll": 0.0,
+  "ring_mcp_pitch": 0.08665512664156455,
+  "ring_pip": 0.1306735622704231,
+  "ring_dip": 0.15534757327314652,
+  "pinky_mcp_roll": 0.0,
+  "pinky_mcp_pitch": 0.09553777060254498,
+  "pinky_pip": 0.15909802294556047,
+  "pinky_dip": 0.12238309457350803,
+  "thumb_cmc_yaw": 0.11507958731670191,
+  "thumb_cmc_roll": 0.18614073900454528,
+  "thumb_cmc_pitch": 0.019344424626135143,
+  "thumb_mcp": 0.06829766245553835,
+  "thumb_dip": 0.1198169974292248
+ },
+ "limits_source": "chapttan6_ws/src/shoubi_description/urdf/arm.urdf.xacro, hand_l20.urdf.xacro",
+ "output_file": "hand_traj.json"
+}

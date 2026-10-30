@@ -1,0 +1,20 @@
+{
+  "phases": [
+    "complete",
+    "contact",
+    "draw",
+    "hold",
+    "lift",
+    "lower",
+    "ready"
+  ],
+  "joint_messages": 909,
+  "max_radial_error_m": 4.882932577054966e-06,
+  "max_plane_error_m": 1.4935875251032016e-06,
+  "max_ink_points": 361,
+  "drawing_frame": true,
+  "paper": true,
+  "stroke_grows": true,
+  "hand_fixed": true,
+  "rviz_scene_subscriber": true
+}

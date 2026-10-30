@@ -1,0 +1,54 @@
+{
+  "radius_m": 0.03,
+  "duration_s": 8.0,
+  "samples": 361,
+  "circle_center_world_m": [
+    0.5977711353866301,
+    0.24630700146123619,
+    0.8733240944986933
+  ],
+  "start_tip_world_m": [
+    0.6277711353866301,
+    0.24630700146123619,
+    0.8733240944986933
+  ],
+  "paper_height_m": 0.8733240944986933,
+  "pen_axis_world": [
+    -3.5286509937615396e-05,
+    0.5000720360792723,
+    -0.8659838090209266
+  ],
+  "max_tip_position_error_m": 1.986340783284465e-06,
+  "max_tip_orientation_error_rad": 6.797543240513975e-06,
+  "max_radial_error_m": 1.855345399988384e-06,
+  "max_height_error_m": 1.6733146506187069e-06,
+  "joint_loop_closure_error_rad": 1.397585373014154e-06,
+  "max_adjacent_joint_step_rad": 0.00508974478071611,
+  "peak_joint_velocity_rad_s": 0.22902290394912939,
+  "peak_joint_acceleration_rad_s2": 0.3412166785702032,
+  "joint_limits_ok": true,
+  "joint_velocity_limits_ok": true,
+  "initial_hand_clearance_above_paper_m": -0.0014740445157244292,
+  "drawing_hand_clearance_above_paper_m": 0.005052616680015918,
+  "preparation_roll_about_pen_deg": 41.5,
+  "preparation_above_paper_arm_positions": [
+    0.1668469797671594,
+    0.8797494165821655,
+    -1.4183244103978152,
+    1.2367626075856277,
+    -0.5864069185261124,
+    -0.8507995187845511,
+    -0.4204076177349956
+  ],
+  "draw_start_arm_positions": [
+    0.12643364616693126,
+    0.8405001117259447,
+    -1.3931970120688861,
+    1.130176708743422,
+    -0.5622099442182299,
+    -0.7908410458425723,
+    -0.3326457880151317
+  ],
+  "collision_checked": false,
+  "notes": "运动学及水平纸面手部净空验证；未做完整碰撞、接触力或动力学检查。圆周起末停稳，手指保持已接受的握笔姿态。"
+}

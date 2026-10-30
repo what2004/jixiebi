@@ -1,0 +1,14 @@
+{
+  "description": "用户截图指定的 PTP 目标姿态，单位 rad；起点为全部关节零位",
+  "duration_s": 5.0,
+  "goal": {
+    "joint1": 0.221, "joint2": 0.941, "joint3": -1.580,
+    "joint4": 0.722, "joint5": -0.187, "joint6": 0.426, "joint7": 0.535,
+    "index_mcp_roll": 0.0, "index_mcp_pitch": 0.257, "index_pip": 1.112, "index_dip": 0.651,
+    "middle_mcp_roll": 0.0, "middle_mcp_pitch": 0.469, "middle_pip": 0.764, "middle_dip": 1.029,
+    "ring_mcp_roll": 0.0, "ring_mcp_pitch": 0.439, "ring_pip": 0.662, "ring_dip": 0.787,
+    "pinky_mcp_roll": 0.0, "pinky_mcp_pitch": 0.484, "pinky_pip": 0.806, "pinky_dip": 0.620,
+    "thumb_cmc_yaw": 0.583, "thumb_cmc_roll": 0.943, "thumb_cmc_pitch": 0.098,
+    "thumb_mcp": 0.346, "thumb_dip": 0.607
+  }
+}

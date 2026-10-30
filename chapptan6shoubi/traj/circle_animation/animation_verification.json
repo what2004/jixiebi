@@ -1,0 +1,36 @@
+{
+  "radius_m": 0.03,
+  "draw_duration_s": 8.0,
+  "cycle_duration_s": 17.15,
+  "paper_height_m": 0.8733240944986933,
+  "circle_center_world_m": [
+    0.5977711353866301,
+    0.24630700146123619,
+    0.8733240944986933
+  ],
+  "phase_order": [
+    "ready",
+    "lower",
+    "contact",
+    "draw",
+    "complete",
+    "lift",
+    "hold"
+  ],
+  "validation_samples": 2059,
+  "joint_limits_ok": true,
+  "joint_velocity_limits_ok": true,
+  "peak_joint_velocity_rad_s": 0.22903851513221696,
+  "peak_joint_acceleration_rad_s2": 0.8828693045344029,
+  "max_interpolated_circle_position_error_m": 4.94916286284282e-06,
+  "max_interpolated_circle_orientation_error_rad": 6.797543240513975e-06,
+  "max_lower_lift_horizontal_error_m": 4.878152907127087e-07,
+  "draw_tip_height_range_m": [
+    0.8733234816812199,
+    0.8733256588106395
+  ],
+  "hand_clearance_nominal_m": 0.005052616680015918,
+  "loop_joint_closure_error_rad": 0.0,
+  "hand_pose_fixed": true,
+  "full_collision_checked": false
+}

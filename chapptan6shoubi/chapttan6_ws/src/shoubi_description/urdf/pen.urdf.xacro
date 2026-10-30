@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- 默认总长 180 mm，笔杆直径 12 mm；pen_link 为握持参考点。
+       局部 +Z 指向笔尖；笔尖由 40 层逐渐缩小的薄圆柱近似。 -->
+  <xacro:macro name="pen_tip_layers" params="radius length base_z layers:=40 index:=0">
+    <xacro:if value="${index &lt; layers}">
+      <visual>
+        <origin xyz="0 0 ${base_z + (index + 0.5) * length / layers}"/>
+        <geometry><cylinder radius="${radius * (layers - index) / layers}" length="${length / layers}"/></geometry>
+        <material name="pen_graphite"><color rgba="0.12 0.12 0.14 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${base_z + (index + 0.5) * length / layers}"/>
+        <geometry><cylinder radius="${radius * (layers - index) / layers}" length="${length / layers}"/></geometry>
+      </collision>
+      <xacro:pen_tip_layers radius="${radius}" length="${length}" base_z="${base_z}"
+                            layers="${layers}" index="${index + 1}"/>
+    </xacro:if>
+  </xacro:macro>
+  <xacro:macro name="simple_pen" params="parent xyz rpy radius:=0.006 barrel_length:=0.16 tip_length:=0.02">
+    <link name="pen_link">
+      <visual>
+        <origin xyz="0 0 -0.02"/>
+        <geometry><cylinder radius="${radius}" length="${barrel_length}"/></geometry>
+        <material name="pen_blue"><color rgba="0.08 0.35 0.85 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 -0.02"/>
+        <geometry><cylinder radius="${radius}" length="${barrel_length}"/></geometry>
+      </collision>
+      <xacro:pen_tip_layers radius="${radius}" length="${tip_length}"
+                            base_z="${barrel_length / 2 - 0.02}"/>
+    </link>
+    <joint name="pen_grip_joint" type="fixed">
+      <parent link="${parent}"/><child link="pen_link"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+    </joint>
+    <link name="pen_tip"/>
+    <joint name="pen_tip_joint" type="fixed">
+      <parent link="pen_link"/><child link="pen_tip"/>
+      <origin xyz="0 0 ${barrel_length / 2 - 0.02 + tip_length}"/>
+    </joint>
+  </xacro:macro>
+</robot>

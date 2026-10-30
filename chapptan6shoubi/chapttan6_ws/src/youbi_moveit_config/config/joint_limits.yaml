@@ -1,0 +1,227 @@
+# 关节限幅与速度限制（由 URDF 自动生成；数值必须带小数点，MoveIt 要求 double）
+# 改限幅请改 temp_description/urdf/arm.urdf.xacro
+joint_limits:
+  joint1:
+    has_position_limits: true
+    min_position: -3.141600
+    max_position: 3.141600
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint2:
+    has_position_limits: true
+    min_position: -1.832600
+    max_position: 1.832600
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint3:
+    has_position_limits: true
+    min_position: -3.141600
+    max_position: 3.141600
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint4:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 2.967100
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint5:
+    has_position_limits: true
+    min_position: -3.141600
+    max_position: 3.141600
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint6:
+    has_position_limits: true
+    min_position: -1.832600
+    max_position: 1.832600
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  joint7:
+    has_position_limits: true
+    min_position: -1.570800
+    max_position: 1.570800
+    has_velocity_limits: true
+    max_velocity: 2.000000
+    has_acceleration_limits: true
+    max_acceleration: 10.000000
+  index_mcp_roll:
+    has_position_limits: true
+    min_position: -0.170000
+    max_position: 0.170000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  index_mcp_pitch:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  index_pip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.570000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  index_dip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  middle_mcp_roll:
+    has_position_limits: true
+    min_position: -0.170000
+    max_position: 0.170000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  middle_mcp_pitch:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  middle_pip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.570000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  middle_dip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  ring_mcp_roll:
+    has_position_limits: true
+    min_position: -0.170000
+    max_position: 0.170000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  ring_mcp_pitch:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  ring_pip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.570000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  ring_dip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  pinky_mcp_roll:
+    has_position_limits: true
+    min_position: -0.170000
+    max_position: 0.170000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  pinky_mcp_pitch:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  pinky_pip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.570000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  pinky_dip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  thumb_cmc_yaw:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.400000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  thumb_cmc_roll:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.220000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  thumb_cmc_pitch:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 0.790000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  thumb_mcp:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.050000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000
+  thumb_dip:
+    has_position_limits: true
+    min_position: 0.000000
+    max_position: 1.220000
+    has_velocity_limits: true
+    max_velocity: 1.000000
+    has_acceleration_limits: true
+    max_acceleration: 20.000000

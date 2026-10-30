@@ -1,0 +1,280 @@
+{
+ "generated_at": "2026-09-30 10:26:59",
+ "command": "jt_run.py --group both --start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 --goal 0.119 -0.109 0.119 1.026 0.730 0.287 0.00 0.00 1.112 1.231 1.180 0.00 1.128 1.341 0.855 0.045 1.060 1.205 1.112 0.00 0.976 1.095 1.256 0.620 0.805 0.337 0.664 0.580 --duration 0 --sync --csv",
+ "group": "hand",
+ "joint_names": [
+  "index_mcp_roll",
+  "index_mcp_pitch",
+  "index_pip",
+  "index_dip",
+  "middle_mcp_roll",
+  "middle_mcp_pitch",
+  "middle_pip",
+  "middle_dip",
+  "ring_mcp_roll",
+  "ring_mcp_pitch",
+  "ring_pip",
+  "ring_dip",
+  "pinky_mcp_roll",
+  "pinky_mcp_pitch",
+  "pinky_pip",
+  "pinky_dip",
+  "thumb_cmc_yaw",
+  "thumb_cmc_roll",
+  "thumb_cmc_pitch",
+  "thumb_mcp",
+  "thumb_dip"
+ ],
+ "start_positions": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "goal_positions": [
+  0.0,
+  1.112,
+  1.231,
+  1.18,
+  0.0,
+  1.128,
+  1.341,
+  0.855,
+  0.045,
+  1.06,
+  1.205,
+  1.112,
+  0.0,
+  0.976,
+  1.095,
+  1.256,
+  0.62,
+  0.805,
+  0.337,
+  0.664,
+  0.58
+ ],
+ "delta": [
+  0.0,
+  1.112,
+  1.231,
+  1.18,
+  0.0,
+  1.128,
+  1.341,
+  0.855,
+  0.045,
+  1.06,
+  1.205,
+  1.112,
+  0.0,
+  0.976,
+  1.095,
+  1.256,
+  0.62,
+  0.805,
+  0.337,
+  0.664,
+  0.58
+ ],
+ "profile": "cosine  (s = 0.5*(1-cos(pi*f))，按关节空间累积弧长分配时间)",
+ "steps": 60,
+ "num_points": 61,
+ "requested_duration_s": 2.2113500537841837,
+ "duration_s": 2.2113500537841837,
+ "vmax_used": 1.0,
+ "max_vel_measured": 0.9523809523809526,
+ "limits": {
+  "index_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "index_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "middle_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "ring_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_mcp_roll": {
+   "lower": -0.17,
+   "upper": 0.17,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_mcp_pitch": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_pip": {
+   "lower": 0.0,
+   "upper": 1.57,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "pinky_dip": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_yaw": {
+   "lower": 0.0,
+   "upper": 1.4,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_roll": {
+   "lower": 0.0,
+   "upper": 1.22,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_cmc_pitch": {
+   "lower": 0.0,
+   "upper": 0.79,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_mcp": {
+   "lower": 0.0,
+   "upper": 1.05,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  },
+  "thumb_dip": {
+   "lower": 0.0,
+   "upper": 1.22,
+   "velocity": 1.0,
+   "acceleration": 20.0
+  }
+ },
+ "peak_v": {
+  "index_mcp_roll": 0.0,
+  "index_mcp_pitch": 0.7898910045502893,
+  "index_pip": 0.8744207073753651,
+  "index_dip": 0.838193691878904,
+  "middle_mcp_roll": 0.0,
+  "middle_mcp_pitch": 0.8012563427452574,
+  "middle_pip": 0.9525574074657714,
+  "middle_dip": 0.6073352597936127,
+  "ring_mcp_roll": 0.03196501367334804,
+  "ring_mcp_pitch": 0.7529536554166427,
+  "ring_pip": 0.8559520328085419,
+  "ring_dip": 0.7898910045502893,
+  "pinky_mcp_roll": 0.0,
+  "pinky_mcp_pitch": 0.6932856298930595,
+  "pinky_pip": 0.7778153327181355,
+  "pinky_dip": 0.8921790483050029,
+  "thumb_cmc_yaw": 0.4404068550550174,
+  "thumb_cmc_roll": 0.5718185779343371,
+  "thumb_cmc_pitch": 0.23938243573151752,
+  "thumb_mcp": 0.47166153509117986,
+  "thumb_dip": 0.4119935095675969
+ },
+ "peak_a": {
+  "index_mcp_roll": 0.0,
+  "index_mcp_pitch": 1.1221723004846496,
+  "index_pip": 1.2422608830005426,
+  "index_dip": 1.1907943476365883,
+  "middle_mcp_roll": 0.0,
+  "middle_mcp_pitch": 1.1383186645203995,
+  "middle_pip": 1.3532671357463262,
+  "middle_dip": 0.8628213281604095,
+  "ring_mcp_roll": 0.04541164885054786,
+  "ring_mcp_pitch": 1.0696966173684608,
+  "ring_pip": 1.2160230414424484,
+  "ring_dip": 1.1221723004846496,
+  "pinky_mcp_roll": 0.0,
+  "pinky_mcp_pitch": 0.9849282061807714,
+  "pinky_pip": 1.1050167886966646,
+  "pinky_dip": 1.2674895768064027,
+  "thumb_cmc_yaw": 0.625671606385326,
+  "thumb_cmc_roll": 0.8123639405486897,
+  "thumb_cmc_pitch": 0.3400827925029918,
+  "thumb_mcp": 0.6700741074836396,
+  "thumb_dip": 0.5853056962959502
+ },
+ "limits_source": "chapttan6_ws/src/shoubi_description/urdf/arm.urdf.xacro, hand_l20.urdf.xacro",
+ "output_file": "hand_traj.json"
+}

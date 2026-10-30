@@ -1,0 +1,45 @@
+# 规划(Plan)不依赖控制器，只有执行(Execute)才需要。
+# 下面是 FollowJointTrajectory 控制器名，接上 ros2_control 后即可执行。
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller
+    - hand_controller
+  arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+      - joint7
+  hand_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - index_mcp_roll
+      - index_mcp_pitch
+      - index_pip
+      - middle_mcp_roll
+      - middle_mcp_pitch
+      - middle_pip
+      - ring_mcp_roll
+      - ring_mcp_pitch
+      - ring_pip
+      - pinky_mcp_roll
+      - pinky_mcp_pitch
+      - pinky_pip
+      - thumb_cmc_yaw
+      - thumb_cmc_roll
+      - thumb_cmc_pitch
+      - thumb_mcp
+      - index_dip
+      - middle_dip
+      - ring_dip
+      - pinky_dip
+      - thumb_dip
